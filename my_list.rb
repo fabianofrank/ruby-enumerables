@@ -7,10 +7,8 @@ class MyList
     @list = list
   end
 
-  def each
-    for i in @list do
-      yield i
-    end
+  def each(&block)
+    @list.each(&block)
   end
 end
 
